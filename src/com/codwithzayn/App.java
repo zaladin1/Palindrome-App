@@ -12,24 +12,32 @@ public class App {
     public static void main(String[] args) {
     
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter your factorial number");
-        int fact = scanner.nextInt();
-        int result = 1;
+        System.out.println("Enter a word");
+        String word = scanner.next();
+        String reverse ="";
+        char ch;
+
+        
        
       
-        for (int i = fact; i >=1 ; i--) {
-            result = result * i;
+        for (int i = word.length(); i >=0 ; i--) {
+            ch = word.charAt(i);
+            reverse = reverse + ch;
         }
 
-        System.out.println(result);
+        System.out.println(word);
+        System.out.println(reverse);
 
+        if (word.toLowerCase().equals(reverse.toLowerCase())) {
+            System.out.println("Input string is palindrome");
+        } else {
+            System.out.println("Input string is not palindrome");
+            
+        }
 
-    
+       
 
-
-
-
-
+       
 
         }
 
